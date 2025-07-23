@@ -65,18 +65,3 @@ std::vector<std::pair<int, int>> Moves::get_moves(int r, int c) const {
     }
     return moves;
 }
-
-bool Moves::is_move_valid(const std::string& piece_type, int from_r, int from_c, int to_r, int to_c) const {
-    auto it = rules.find(piece_type);
-    if (it == rules.end())
-        return false;
-
-    int dx = to_r - from_r;
-    int dy = to_c - from_c;
-
-    for (auto [mdx, mdy] : it->second) {
-        if (mdx == dx && mdy == dy)
-            return true;
-    }
-    return false;
-}
