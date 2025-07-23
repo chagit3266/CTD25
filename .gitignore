@@ -4,7 +4,7 @@
 /.vscode
 /java/target/
 /.idea
-py
-java
-It1_interfaces
+/py
+/java
+/It1_interfaces
 .vs/
