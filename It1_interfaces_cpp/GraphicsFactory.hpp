@@ -6,6 +6,7 @@
 #include <map>
 #include <string>
 
+//מחלקה עצמאית שלא משתנה בזמן ריצה
 // מקבלת תיקיית sprite וקובץ הגדרות, יוצרת מופע Graphics.
 
 class GraphicsFactory {

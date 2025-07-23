@@ -13,28 +13,24 @@
 int main() {
     try {
         // 1. יצירת תמונה ללוח (אפשר להוסיף קריאה לקובץ אם יש)
-        auto img = std::make_shared<Img>();
+        Img board_img;
         // כאן תוכלי לקרוא תמונה אם יש צורך, למשל:
-        // img->read("board.png", {640,480}, true);
+        board_img.read("../../board.png", {640,480}, true);
 
         // 2. יצירת לוח עם הפרמטרים הנדרשים
         // יש לעדכן את הערכים בהתאם למשחק שלך
-        int cell_H_pix = 64;
-        int cell_W_pix = 64;
-        int cell_H_m = 1;
-        int cell_W_m = 1;
-        int W_cells = 8;
-        int H_cells = 8;
+        int board_width_cells = 8;
+        int board_height_cells = 8;
+        int cell_width_pix = board_img.get_mat().cols / board_width_cells;
+        int cell_height_pix = board_img.get_mat().rows / board_height_cells;
 
-        std::shared_ptr<Board> board = std::make_shared<Board>(
-            cell_H_pix, cell_W_pix,
-            cell_H_m, cell_W_m,
-            W_cells, H_cells,
-            img
+        std::shared_ptr<Board> game_board = std::make_shared<Board>(
+            cell_height_pix, cell_width_pix, board_width_cells, board_height_cells, board_img
         );
 
+
         // 3. יצירת פקטוריז (בהתאם למחלקות שלך)
-        PhysicsFactory physicsFactory(board);
+        PhysicsFactory physicsFactory(game_board);
         GraphicsFactory graphicsFactory;
 
         // 4. יצירת שחקנים (Pieces) עם כל הרכיבים הדרושים
