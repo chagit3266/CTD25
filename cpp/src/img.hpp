@@ -60,6 +60,11 @@ public:
      */
     bool is_loaded() const { return !img.empty(); }
 
+    Img clone() const {
+        Img copy;
+        copy.img = img.clone();  // clone של OpenCV Mat יוצר העתק עצמאי
+        return copy;
+    }
 private:
     cv::Mat img;
 }; 
