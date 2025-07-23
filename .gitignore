@@ -3,6 +3,7 @@
 /py/__pycache__
 /.vscode
 /java/target/
+/.idea
 py
 java
 It1_interfaces
