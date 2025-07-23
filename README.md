@@ -1,4 +1,63 @@
 ﻿# SimpleImg
+
+מבנה תיקיות של פרויקט CTD25:
+
+CTD25/
+├── .vs/ # קבצי קונפיגורציה של Visual Studio (נוצרים אוטומטית)
+├── cpp/
+│ ├── OpenCV_451/ # ספריית OpenCV מקומית (גרסה 4.5.1)
+│ │ ├── include/
+│ │ │ └── opencv2/ # כותרות OpenCV
+│ │ │ ├── calib3d/
+│ │ │ ├── core/
+│ │ │ │ ├── cuda/
+│ │ │ │ ├── hal/
+│ │ │ │ ├── opencl/
+│ │ │ │ └── ...
+│ │ │ ├── dnn/
+│ │ │ ├── features2d/
+│ │ │ └── ... # +50 תיקיות נוספות
+│ ├── out/ # קבצי build שנוצרו
+│ │ └── build/
+│ │ └── x64-Debug/
+│ │ ├── CMakeCache.txt
+│ │ └── ...
+│ ├── src/ # קוד המקור שלך
+│ │ ├── img.cpp
+│ │ ├── img.hpp
+│ │ └── main.cpp
+│ └── CMakeLists.txt # קובץ קונפיגורציית CMake
+├── It1_interfaces_cpp/ # ליבת המשחק
+│ ├── board.cpp
+│ ├── command.cpp
+│ ├── game.cpp
+│ ├── graphics.cpp
+│ ├── piece.cpp
+│ ├── physics.cpp
+│ └── test/
+│ └── board.test.cpp
+├── pieces/ # הגדרות כלים
+│ ├── PB/ # רגלי שחור (Pawn Black)
+│ │ └── states/
+│ │ ├── idle/
+│ │ │ └── config.json
+│ │ ├── move/
+│ │ └── ...
+│ ├── PW/ # רגלי לבן
+│ ├── QB/ # מלכה שחורה
+│ └── ... # כלים נוספים (RB, RW, KB, KW, NW, NB)
+├── java/ # קוד Java (לא בשימוש)
+├── py/ # קוד Python (לא בשימוש)
+├── .gitignore # קובץ התעלמות של Git
+├── board.png # תמונת לוח משחק לדוגמה
+├── project_structure.txt # פלט מבנה תיקיות
+└── README.md # תיעוד
+
+Copy
+Edit
+
+
+-------
 CTD25/
 ├── .vs/                          # קבצי קונפיגורציה של Visual Studio (נוצרו אוטומטית)
 ├── cpp/
