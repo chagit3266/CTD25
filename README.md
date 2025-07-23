@@ -2,6 +2,7 @@
 
 מבנה תיקיות של פרויקט CTD25:
 
+```text
 CTD25/
 ├── .vs/ # קבצי קונפיגורציה של Visual Studio (נוצרים אוטומטית)
 ├── cpp/
@@ -52,7 +53,7 @@ CTD25/
 ├── board.png # תמונת לוח משחק לדוגמה
 ├── project_structure.txt # פלט מבנה תיקיות
 └── README.md # תיעוד
-
+```
 Copy
 Edit
 
