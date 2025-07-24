@@ -7,7 +7,7 @@
 #include "Physics.hpp"
 #include "Graphics.hpp"
 
-//оцб лмй, тн отбш бйп оцбйн т"й айшетйн.
+//пїЅпїЅпїЅ пїЅпїЅпїЅ, пїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅ"пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ.
 class State {
 private:
     std::string name; // Name of this state (e.g., "idle", "move")

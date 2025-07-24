@@ -5,11 +5,11 @@
 //מציגה את הכלי עם אנימציות ותמונות.
 class Graphics {
 public:
-    Graphics();
+    Graphics(const std::filesystem::path& folder, const std::pair<int, int>& cell_size, bool loop = true, double fps = 6.0);
+    Graphics(const Graphics& other);
 
-    void reset();
-    void reset(int now_ms);
-
-    void draw();
-    // TODO: תמונות, אנימציות
+    void reset(const Command& cmd);
+    void update(int now_ms);       
+    const Img& get_img() const;     
+    bool is_finished() const;
 };
